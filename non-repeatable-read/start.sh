@@ -5,6 +5,8 @@ BLUE='\033[0;34m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
+path=/usr/src/non-repeatable-read
+
 cycle=300                   # 執行次數
 snapshotAfterTransaction=0  # 另一筆 transaction commit 前取得的快照計數
 snapshotBeforeTransaction=0 # 另一筆 transaction commit 後取得的快照計數
@@ -14,7 +16,7 @@ for i in $(seq 1 $cycle);
 do 
     
     # 執行 lab.sh 中的指令，並過濾出有400、500、600的結果
-    output=$(sh ./lab.sh | grep -E '400|500|600')
+    output=$(sh $path/lab.sh | grep -E '400|500|600')
 
     # 儲存各種狀況結果
     ## 兩筆資料皆是另一筆 transaction commit 後的快照

@@ -49,6 +49,6 @@ do
     # 三種狀況結果統計
     if [ $i -eq $cycle ]
     then
-        echo -e "${GREEN}AfterTransaction: ${snapshotAfterTransaction}\n${BLUE}BeforeTransaction: ${snapshotBeforeTransaction}\n${RED}Non-repeatabl: $snapshotNonRepeatable${NC}"
+        echo -e "${GREEN}AfterTransaction: ${snapshotAfterTransaction}\n${BLUE}BeforeTransaction: ${snapshotBeforeTransaction}\n${RED}Non-repeatable: $snapshotNonRepeatable${NC}"
     fi
 done

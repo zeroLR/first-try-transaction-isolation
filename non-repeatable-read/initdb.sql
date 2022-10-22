@@ -1,0 +1,8 @@
+BEGIN;
+DROP TABLE IF EXISTS accounts;
+CREATE TABLE accounts(id SERIAL PRIMARY KEY, balance INT);
+INSERT INTO accounts(balance)
+VALUES(500);
+INSERT INTO accounts(balance)
+VALUES(500);
+COMMIT;

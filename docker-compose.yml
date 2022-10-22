@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  db:
+    container_name: pg
+    image: postgres:14-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    working_dir: /usr/src
+    # 直接把現在資料夾內容映射至建立的container中
+    volumes:
+      - .:/usr/src

@@ -1,0 +1,9 @@
+BEGIN;
+-- SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+SELECT balance
+FROM accounts
+WHERE id = 1;
+SELECT balance
+FROM accounts
+WHERE id = 2;
+COMMIT;
